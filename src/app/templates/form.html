@@ -1,0 +1,123 @@
+<div class="form-control section">
+    <label>Name</label>
+    <input type="text" [(ngModel)]="data.name">
+</div>
+<div class="form-control section">
+    <label>Position</label>
+    <input type="text" [(ngModel)]="data.position">
+</div>
+<h1>Education</h1>
+<div class="form-control section">
+    <label>University</label>
+    <input type="text" [(ngModel)]="data.education.university">
+</div>
+<div class="form-control section">
+    <label>Branch</label>
+    <input type="text" [(ngModel)]="data.education.branch">
+</div>
+<div class="form-control section">
+    <label>Description</label>
+    <input type="text" [(ngModel)]="data.education.description">
+</div>
+<br>
+
+<h1>Work experience</h1>
+<div class="companies-list section">
+    <div class="form-control">
+        <button class="add pull-right" (click)="data.companies.push({projects:[{}]});">Add company</button>
+    </div>
+    <div class="company section" *ngFor="let company of data.companies">
+        <div class="delim-text">{{ company.name || 'Company' }}</div>
+        <div class="form-control">
+            <label>Company name</label>
+            <input type="text" [(ngModel)]="company.name">
+        </div>
+        <div class="form-control">
+            <label>Work period</label>
+            <input type="text" [(ngModel)]="company.workTime">
+        </div>
+        <div class="form-control">
+            <label>Position</label>
+            <input type="text" [(ngModel)]="company.position">
+        </div>
+        <div class="projects-list section">
+            <div class="form-control">
+                <button class="add pull-right" (click)="company.projects.push({});">Add project</button>
+            </div>
+            <div class="project section" *ngFor="let project of company.projects">
+                <div class="delim-text">{{ project.name || 'Project' }}</div>
+                <div class="form-control">
+                    <label>Project Name</label>
+                    <input type="text" [(ngModel)]="project.name">
+                </div>
+                <div class="form-control">
+                    <label>Project description</label>
+                    <textarea [(ngModel)]="project.description"></textarea>
+                </div>
+                <div class="form-control">
+                    <label>Duration (years)</label>
+                    <input type="text"  [(ngModel)]="project.duration">
+                </div>
+                <div class="form-control">
+                    <label>Team size</label>
+                    <input type="text"  [(ngModel)]="project.teamSize">
+                </div>
+                <div class="form-control">
+                    <label>Technologies</label>
+                    <input type="text" [(ngModel)]="project.techStack">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h1>Skills</h1>
+<div class="companies-list section">
+    <div class="company section">
+        <div class="delim-text">{{ data.skills.leftName || 'Skills' }}</div>
+        <div class="form-control">
+            <label>Left column name</label>
+            <input type="text" [(ngModel)]="data.skills.leftName">
+        </div>
+
+        <div class="form-control">
+            <button class="add pull-right" (click)="data.skills.left.push({title:'', level: 1});">Add skill</button>
+        </div>
+        <div class="section skill" *ngFor="let skill of data.skills.left">
+            <div class="form-control">
+                <label>Skill name</label>
+                <input type="text"  [(ngModel)]="skill.title">
+            </div>
+            <div class="form-control level">
+                <label>Level</label>
+                <input type="number" max="5" min="1" step="0.5" [(ngModel)]="skill.level">
+            </div>
+        </div>
+    </div>
+    <div class="company section">
+        <div class="delim-text">{{ data.skills.rightName || 'Skills' }}</div>
+        <div class="form-control">
+            <label>Right column name</label>
+            <input type="text" [(ngModel)]="data.skills.rightName">
+        </div>
+
+        <div class="form-control">
+            <button class="add pull-right" (click)="data.skills.right.push({title:'', level: 1});">Add skill</button>
+        </div>
+        <div class="section skill" *ngFor="let skill of data.skills.right">
+            <div class="form-control">
+                <label>Skill name</label>
+                <input type="text"  [(ngModel)]="skill.title">
+            </div>
+            <div class="form-control level">
+                <label>Level</label>
+                <input type="number" max="5" min="1" step="1" [(ngModel)]="skill.level">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="form-control">
+    <button class="add pull-right" (click)="render();">Render</button>
+</div>
+

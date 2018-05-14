@@ -1,0 +1,126 @@
+@import 'variables.scss';
+
+/* GENERAL STYLES */
+h1 {
+  color: #aeb8b8;
+  font-size: 30px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.page-global-container {
+  overflow: auto;
+  font-family: OpenSans;
+  font-size: 13px;
+  background: #F8F8F9;
+  height: 100%;
+  .content {
+    width: 1024px;
+    margin: auto;
+    padding: 30px 20px 50px 20px;
+    height: 100%;
+    info-form {
+      width: 500px;
+      display: block;
+      margin: auto;
+    }
+    .company {
+      position: relative;
+      border-left: 1px solid #aeb8b8;
+      padding-left: 25px;
+      margin-left: -25px;
+      .delim-text {
+        transform: rotate(270deg);
+        transform-origin: 0 0;
+        margin-left: -54px;
+        top: 40%;
+        position: absolute;
+        color: #aeb8b8;
+        text-transform: uppercase;
+        font-size: 25px;
+        width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .project {
+        position: relative;
+        border-right: 1px solid #aeb8b8;
+        padding-right: 25px;
+        margin-right: -25px;
+        padding-bottom: 15px;
+        border-top:1px dashed #d3e0e0;
+        border-bottom: 1px dashed #d3e0e0;
+        .delim-text {
+          transform: rotate(90deg);
+          top: 30%;
+          margin-left: 106%;
+          width: 250px;
+        }
+      }
+    }
+    .form-control {
+      min-height: 40px;
+      margin-bottom: 8px;
+    }
+    .section {
+      margin: 20px 0;
+      &.skill {
+        .form-control{
+          &:first-child {
+            width: calc(100% - 80px);
+            display: inline-block;
+          }
+          &:last-child {
+            float: right;
+            padding-left: 10px;
+            width: 80px;
+          }
+        }
+      }
+    }
+    label {
+      display: block;
+      color: #296173;
+      height: 20px;
+      line-height: 20px;
+      cursor: default;
+    }
+    input {
+      width: 100%;
+      height: 25px;
+      padding: 0 5px;
+      border-radius: 3px;
+      border: 1px solid #c5c5c5;
+    }
+    textarea {
+      width: 100% !important;
+      height: 100px;
+      border-radius: 3px;
+      border: 1px solid #c5c5c5;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+  }
+}
+
+button {
+  padding: 5px 15px;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  &.add {
+    background: #23AFA5;
+  }
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+.clearfix {
+  clear: both;
+}

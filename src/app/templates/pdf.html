@@ -1,0 +1,93 @@
+<div class="pdf-page" id="pdf-page">
+    <div class="head">
+        <div class="logo"></div>
+        <div class="logo-side">
+            <div class="name">{{data.name}}</div>
+            <div class="position">{{data.position}}</div>
+        </div>
+    </div>
+    <div class="section-name" style="margin-top:0px;">
+        <img src="/assets/expirience-icon.svg">
+        <span>Experience</span>
+    </div>
+    <div class="work-item" *ngFor="let company of data.companies">
+        <div class="left">
+            <div class="work-name">{{company.name}}</div>
+            <div class="period">{{company.workTime}}</div>
+        </div>
+        <div class="right">
+            <div class="dot"></div>
+            <div class="position">Position - {{company.position}}</div>
+            <div class="prj">Projects:</div>
+            <ul class="projects">
+                <li *ngFor="let project of company.projects">
+                    <div class="desc">
+                        <span>{{project.name}}</span>&nbsp;-&nbsp;{{ project.description }}
+                    </div>
+                    <div class="details">
+                        <span>Duration: {{project.duration}}</span>
+                        <span>Team: {{project.teamSize}}</span>
+                    </div>
+                    <div class="stack">{{project.techStack}}</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="section-name">
+        <img src="/assets/education-icon.svg">
+        <span>Education</span>
+    </div>
+    <div class="education">
+        <div class="name">{{data.education.university}}</div>
+        <div class="prof">{{data.education.branch}}</div>
+        <div class="desc">{{data.education.description}}</div>
+    </div>
+
+
+
+    <div class="section-name">
+        <img src="/assets/skills-icon.svg">
+        <span>Professional skills</span>
+    </div>
+    <div class="skills">
+        <div class="left">
+            <div class="name">{{data.skills.leftName}}</div>
+            <ul class="skills-list">
+                <li *ngFor="let skill of data.skills.left">
+                    <div class="title">
+                        {{skill.title}}
+                    </div>
+                    <div class="level pull-right {{'c'+skill.level}}">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="name">{{data.skills.rightName}}</div>
+            <ul class="skills-list">
+                <li *ngFor="let skill of data.skills.right">
+                    <div class="title">
+                        {{skill.title}}
+                    </div>
+                    <div class="level pull-right {{'c'+skill.level}}">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+
+<button id="float-btn" (click)="generate()">Download</button>
