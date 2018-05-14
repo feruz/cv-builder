@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>point</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Oleg-1st" transform="translate(-163.000000, -218.000000)" fill="#D4D7DA">
+            <g id="Expirience" transform="translate(54.000000, 174.000000)">
+                <g id="Company-1" transform="translate(5.000000, 42.000000)">
+                    <g id="point" transform="translate(104.000000, 2.000000)">
+                        <path d="M9,5.77058824 C7.19152941,5.77058824 5.77058824,7.19152941 5.77058824,9 C5.77058824,10.8084706 7.19152941,12.2294118 9,12.2294118 C10.8084706,12.2294118 12.2294118,10.8084706 12.2294118,9 C12.2294118,7.19152941 10.8084706,5.77058824 9,5.77058824 L9,5.77058824 Z M9,0 C4.05,0 0,4.05 0,9 C0,13.95 4.05,18 9,18 C13.95,18 18,13.95 18,9 C18,4.05 13.95,0 9,0 L9,0 Z M9,16.5176471 C4.86529412,16.5176471 1.48235294,13.1347059 1.48235294,9 C1.48235294,4.86529412 4.86529412,1.48235294 9,1.48235294 C13.1347059,1.48235294 16.5176471,4.86529412 16.5176471,9 C16.5176471,13.1347059 13.1347059,16.5176471 9,16.5176471 L9,16.5176471 Z" id="point-icon"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
